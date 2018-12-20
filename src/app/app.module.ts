@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
+import { FormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { routing } from './app.routing';
+import { JoditAngularModule } from 'jodit-angular';
 
 import { fakeBackendProvider , AppComponent , AlertComponent , JwtInterceptor , ErrorInterceptor , HomeComponent ,
-  LoginComponent , RegisterComponent , ExamplesComponent } from './index';
+  LoginComponent , RegisterComponent , ExamplesComponent , ServerComponent , ServersComponent ,
+  Example1Component } from './index';
 
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
+    JoditAngularModule,
     ReactiveFormsModule,
     HttpClientModule,
     routing
@@ -20,7 +25,10 @@ import { fakeBackendProvider , AppComponent , AlertComponent , JwtInterceptor , 
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    ExamplesComponent
+    ExamplesComponent,
+    ServerComponent,
+    ServersComponent,
+    Example1Component
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

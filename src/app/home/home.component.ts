@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     currentUser: User;
     currentUserSubscription: Subscription;
     users: User[] = [];
+    name = '';
 
     constructor(
         private authenticationService: AuthenticationService,
