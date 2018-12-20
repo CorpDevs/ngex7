@@ -1,9 +1,18 @@
 ﻿<h1>Hi {{currentUser.firstName}}!</h1>
 <p>You're logged in with {{ currentUser.username }}</p>
 <h3>All registered users:</h3>
-<ul>
-    <li *ngFor="let user of users">
-        {{user.username}} ({{user.firstName}} {{user.lastName}})
-        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
-    </li>
-</ul>
+
+<div class="card" *ngFor="let user of users">
+  <img class="card-img-top" src="holder.js/100x180/" alt="">
+  <div class="card-body">
+    <h4 class="card-title">{{user.username}} ({{user.firstName}} {{user.lastName}})</h4>
+    <p class="card-text"><a (click)="deleteUser(user.id)" class="text-danger">Delete</a></p>
+  </div>
+</div>
+
+<div>
+  <input type="text" [(ngModel)]="name">
+  <p>{{ name }}</p>
+</div>
+
+<jodit-editor></jodit-editor>

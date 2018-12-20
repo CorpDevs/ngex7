@@ -6,6 +6,9 @@ import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { ExamplesComponent } from './examples';
+import { ServerComponent } from './examples';
+import { ServersComponent } from './examples';
+import { Example1Component } from './examples';
 
 export {
   AppComponent ,
@@ -16,5 +19,8 @@ export {
   HomeComponent ,
   LoginComponent ,
   RegisterComponent ,
-  ExamplesComponent
+  ExamplesComponent,
+  ServerComponent,
+  ServersComponent,
+  Example1Component
 };

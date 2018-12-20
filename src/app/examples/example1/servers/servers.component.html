@@ -1,0 +1,18 @@
+<p>
+  servers works!
+</p>
+<p>Server name:</p>
+<input type="text" (input)="updateServerName($event)">
+<p> {{ serverName }}</p>
+<p><input 
+  type="button" 
+  class="btn btn-primary" 
+  [disabled]="!allowAddServer" 
+  value="Add new server"
+  (click)="onCreateServer()"
+  ></p>
+<p [innerText]="allowAddServer"></p>
+<p> {{ serverCreationStatus }} </p>
+<app-server></app-server>
+<app-server></app-server>
+<app-server></app-server>
