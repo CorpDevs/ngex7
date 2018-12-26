@@ -2,15 +2,35 @@
   servers works!
 </p>
 <p>Server name:</p>
-<input type="text" (input)="updateServerName($event)">
+<form>
+<input
+  id="server_name"
+  type="text"
+  ngModel
+  required
+  minlength="4"
+  maxlength="12"
+  #server_name="ngModel"
+  name="server_name"
+  pattern="localhost"
+  (change)="log(server_name)"
+  class="form-control">
+  <div class="alert alert-danger" *ngIf="server_name.touched && !server_name.valid ">
+    <div *ngIf="server_name.errors.required ">Server name is required!</div>
+    <div *ngIf="server_name.errors.minlength ">Server name should be more than {{ server_name.errors.minlength.requiredLength }} chars!</div>
+    <div *ngIf="server_name.errors.maxlength ">Server name should not be more than 12 chars!</div>
+    <div *ngIf="server_name.errors.pattern ">Server name no match with pattern!</div>
+  </div>
 <p> {{ serverName }}</p>
 <p><input 
-  type="button" 
+  type="button"
   class="btn btn-primary" 
-  [disabled]="!allowAddServer" 
+  [disabled]="!allowAddServer || !server_name.valid"
   value="Add new server"
   (click)="onCreateServer()"
-  ></p>
+  >
+</p>
+</form>
 <p [innerText]="allowAddServer"></p>
 <p> {{ serverCreationStatus }} </p>
 <app-server></app-server>
