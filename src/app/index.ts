@@ -9,6 +9,7 @@ import { ExamplesComponent } from './examples';
 import { ServerComponent } from './examples';
 import { ServersComponent } from './examples';
 import { Example1Component } from './examples';
+import { Example2Component } from './examples';
 
 export {
   AppComponent ,
@@ -22,5 +23,6 @@ export {
   ExamplesComponent,
   ServerComponent,
   ServersComponent,
-  Example1Component
+  Example1Component,
+  Example2Component
 };

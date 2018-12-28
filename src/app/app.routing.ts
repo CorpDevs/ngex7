@@ -1,6 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent , LoginComponent , RegisterComponent ,
-  ExamplesComponent , Example1Component} from './index';
+  ExamplesComponent , Example1Component , Example2Component} from './index';
 import { AuthGuard } from './_guards';
 
 const appRoutes: Routes = [
@@ -9,6 +9,7 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'examples', component: ExamplesComponent },
   { path: 'example1', component: Example1Component },
+  { path: 'example2', component: Example2Component },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
