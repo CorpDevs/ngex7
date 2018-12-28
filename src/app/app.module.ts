@@ -8,7 +8,7 @@ import { JoditAngularModule } from 'jodit-angular';
 
 import { fakeBackendProvider , AppComponent , AlertComponent , JwtInterceptor , ErrorInterceptor , HomeComponent ,
   LoginComponent , RegisterComponent , ExamplesComponent , ServerComponent , ServersComponent ,
-  Example1Component } from './index';
+  Example1Component , Example2Component } from './index';
 
 @NgModule({
   imports: [
@@ -28,7 +28,8 @@ import { fakeBackendProvider , AppComponent , AlertComponent , JwtInterceptor , 
     ExamplesComponent,
     ServerComponent,
     ServersComponent,
-    Example1Component
+    Example1Component,
+    Example2Component
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
